@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/fitness">
+
+
+
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="wrap_content"
+        android:layout_height="94dp"
+        android:layout_gravity="center"
+        android:padding="16dp"
+        android:text="Fitness Tracker"
+        android:textColor="@color/white"
+        android:textSize="36dp"
+        android:textStyle="bold" />
+
+    <!-- Step Counter -->
+
+    <!-- Metrics Row -->
+    <TextView
+        android:id="@+id/stepCountView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/circular_background"
+        android:gravity="center"
+        android:text="0"
+        android:textColor="@color/stepColor"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="32dp"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/calorieCountView"
+                style="@style/MetricStyle"
+                android:layout_width="54dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Cal: 0"
+                android:textColor="@color/calorieColor" />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/calories"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/kmCountView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Km: 0"
+                android:textColor="@color/distanceColor"
+                style="@style/MetricStyle"/>
+
+            <ImageView
+                android:layout_width="39dp"
+                android:layout_height="42dp"
+                android:src="@drawable/walking" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/heartRateView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="HR: 0"
+                android:textColor="@color/heartRateColor"
+                style="@style/MetricStyle"/>
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="36dp"
+                android:src="@drawable/hr" />
+        </LinearLayout>
+    </LinearLayout>
+    <Button
+        android:layout_marginTop="20dp"
+        android:id="@+id/btnReset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset"
+        android:textSize="36dp"
+        android:layout_gravity="center" />
+</LinearLayout>
